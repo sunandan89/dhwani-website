@@ -68,3 +68,77 @@
     });
   }
 })();
+
+/* client bucket tabs */
+(function () {
+  var root = document.querySelector('[data-bucket-tabs]');
+  if (!root) return;
+  var tabs = root.querySelectorAll('.bucket-tab');
+  var panels = root.querySelectorAll('.bucket-panel');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-selected', 'false'); });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+      t.classList.add('active'); t.setAttribute('aria-selected', 'true');
+      var p = root.querySelector('.bucket-panel[data-bucket="' + t.dataset.bucket + '"]');
+      if (p) p.classList.add('active');
+    });
+  });
+})();
+
+/* brochure download gate: [data-brochure] links open a form; details go to partnerships@; download starts on submit */
+(function () {
+  var triggers = document.querySelectorAll('[data-brochure]');
+  if (!triggers.length) return;
+  var PDF = 'assets/docs/dhwani-brochure.pdf';
+  var overlay = document.createElement('div');
+  overlay.className = 'brochure-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Download the Dhwani RIS brochure');
+  overlay.innerHTML =
+    '<div class="brochure-modal">' +
+    '<button type="button" class="brochure-close" aria-label="Close">&times;</button>' +
+    '<h3>Get the Dhwani RIS brochure</h3>' +
+    '<p>Tell us who you are and the download starts right away.</p>' +
+    '<form id="brochure-form">' +
+    '<label for="br-name">Your name</label><input id="br-name" name="name" type="text" required autocomplete="name" placeholder="Full name">' +
+    '<label for="br-org">Organisation</label><input id="br-org" name="org" type="text" required autocomplete="organization" placeholder="Organisation name">' +
+    '<label for="br-email">Work email</label><input id="br-email" name="email" type="email" required autocomplete="email" placeholder="name@organisation.org">' +
+    '<div class="actions"><button type="submit" class="btn btn-primary" style="flex:1;justify-content:center">Download brochure</button></div>' +
+    '</form></div>';
+  document.body.appendChild(overlay);
+
+  function close() { overlay.classList.remove('open'); }
+  overlay.querySelector('.brochure-close').addEventListener('click', close);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+
+  triggers.forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      overlay.classList.add('open');
+      var first = overlay.querySelector('input'); if (first) first.focus();
+    });
+  });
+
+  overlay.querySelector('#brochure-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('br-name').value.trim();
+    var org = document.getElementById('br-org').value.trim();
+    var email = document.getElementById('br-email').value.trim();
+    var payload = { name: name, org: org, email: email, source: 'brochure-download' };
+    /* try the serverless endpoint if deployed; otherwise fall back silently */
+    try {
+      fetch('/api/contact', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function () {});
+    } catch (err) {}
+    /* start the download */
+    var a = document.createElement('a');
+    a.href = PDF; a.download = 'Dhwani-RIS-Brochure.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+    close();
+  });
+})();
