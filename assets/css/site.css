@@ -306,3 +306,11 @@ header.site.scrolled .logo:focus-visible,header.site.scrolled nav.main a:focus-v
 .brochure-modal .actions{display:flex;gap:12px;margin-top:24px}
 .brochure-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.3rem;color:var(--grey);cursor:pointer;line-height:1}
 .brochure-close:hover{color:var(--maroon)}
+
+/* ===== team directory chips ===== */
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:18px}
+.tm-chip{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;transition:.2s}
+.tm-chip:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.tm-av{width:38px;height:38px;border-radius:50%;background:var(--tint-maroon);color:var(--maroon);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;font-family:var(--serif);flex:none}
+.tm-txt b{display:block;font-size:.92rem;line-height:1.25}
+.tm-txt i{font-style:normal;font-size:.78rem;color:var(--grey)}
