@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The non-profit journey | Where technology fits, from day one to ₹100 crore | Dhwani RIS</title>
+<meta name="description" content="A founder's-eye map of a non-profit's growth — and where the right technology enters at each stage, from pen-and-paper beginnings to institutional scale." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#871320" />
+<style>
+.preview-ribbon{position:fixed;top:84px;right:-40px;z-index:200;background:var(--orange);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 48px;transform:rotate(35deg);box-shadow:0 4px 14px rgba(0,0,0,.2);pointer-events:none}
+/* journey timeline */
+.journey{position:relative;margin-top:20px}
+.journey::before{content:"";position:absolute;left:26px;top:0;bottom:0;width:3px;background:linear-gradient(var(--orange),var(--maroon));border-radius:2px}
+.stage{position:relative;padding:0 0 64px 84px}
+.stage:last-child{padding-bottom:0}
+.stage .dot{position:absolute;left:13px;top:4px;width:29px;height:29px;border-radius:50%;background:var(--card);border:3px solid var(--orange);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:var(--maroon);font-family:var(--serif)}
+.stage .band{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:6px}
+.stage h3{font-family:var(--serif);font-weight:600;font-size:1.75rem;margin-bottom:8px}
+.stage .life{color:var(--ink-soft);font-size:1.02rem;max-width:760px;margin-bottom:20px}
+.stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:960px}
+.sg-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.sg-card h4{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.sg-card.pain h4{color:var(--grey)}
+.sg-card.fit{border-color:var(--tint-maroon);background:linear-gradient(180deg,#fff, var(--tint-maroon))}
+.sg-card.fit h4{color:var(--maroon)}
+.sg-card ul{list-style:none}
+.sg-card li{font-size:.93rem;color:var(--ink-soft);padding-left:20px;position:relative;margin-bottom:9px;line-height:1.5}
+.sg-card.pain li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--line)}
+.sg-card.fit li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.sg-card li b{color:var(--ink)}
+@media(max-width:760px){.stage-grid{grid-template-columns:1fr}.stage{padding-left:60px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="preview-ribbon">Concept</div>
+
+<!-- HEADER -->
+<header class="site" id="hdr" data-solid>
+  <div class="bar">
+    <a class="logo" href="index.html">
+      <span class="mark"></span>
+      <span>Dhwani<small>Rural Information Systems</small></span>
+    </a>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="dpdp.html">DPDP</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-cta">Book a consultation</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main id="main">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark">A founder's-eye view</span>
+    <h1>From a two-person idea to a ₹100-crore institution — where does <em>technology</em> come in?</h1>
+    <p class="lead">Every non-profit walks a version of the same road. Here's that road, stage by stage — what starts breaking, what you actually need (and don't), and where Dhwani fits when you're ready. Not before.</p>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="sec">
+  <div class="wrap">
+    <div class="journey">
+
+      <div class="stage reveal">
+        <span class="dot">1</span>
+        <span class="band">Getting started · first grants</span>
+        <h3>The pen-and-paper years</h3>
+        <p class="life">Two founders, one cause, a first grant or two. Beneficiary lists live in notebooks, budgets in a single Excel sheet, donor updates as WhatsApp photos. And honestly — that's fine. At this stage, process matters more than software.</p>
+        <div class="stage-grid">
+          <div class="sg-card pain">
+            <h4>What starts to pinch</h4>
+            <ul>
+              <li>Funders ask for reports the notebook can't produce</li>
+              <li>No credible digital presence when a donor googles you</li>
+              <li>Every data request means a weekend of retyping</li>
+            </ul>
+          </div>
+          <div class="sg-card fit">
+            <h4>Where Dhwani fits</h4>
+            <ul>
+              <li><b>Honest advice, free:</b> a one-hour session on what to digitise now and what to leave alone</li>
+              <li><b>Simple data collection</b> on mForm — structured records without an IT team</li>
+              <li>Mostly, we'll tell you: don't buy software yet. Build clean processes first.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <span class="dot">2</span>
+        <span class="band">₹1–10 crore · first repeat funders</span>
+        <h3>Excel starts to crack</h3>
+        <p class="life">Two or three programmes, the first fundraising hire, a small field team. Each funder wants a different report format. Versions of the truth multiply — the field's Excel, the office's Excel, the auditor's Excel.</p>
+        <div class="stage-grid">
+          <div class="sg-card pain">
+            <h4>What starts to pinch</h4>
+            <ul>
+              <li>Field data arrives late, incomplete, or twice</li>
+              <li>Donor pipeline lives in the founder's head</li>
+              <li>Reporting eats the team's programme time</li>
+            </ul>
+          </div>
+          <div class="sg-card fit">
+            <h4>Where Dhwani fits</h4>
+            <ul>
+              <li><b>mForm as your programme MIS</b> — offline field collection, one source of truth, real-time dashboards</li>
+              <li><b>mGrant NUO</b> — grant and donor management sized for implementing NGOs</li>
+              <li><b>Adoption support</b> — we train the field team in their language, and stay until it sticks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <span class="dot">3</span>
+        <span class="band">₹10–50 crore · multi-state scale</span>
+        <h3>The organisation becomes a system</h3>
+        <p class="life">Multiple states, a dozen funders, a real HR function, statutory audits, and a board that wants dashboards. The question shifts from "how do we collect data?" to "how does the whole organisation run on data?" — and now compliance (FCRA, CSR-1, DPDP) has teeth.</p>
+        <div class="stage-grid">
+          <div class="sg-card pain">
+            <h4>What starts to pinch</h4>
+            <ul>
+              <li>Programme, finance, and HR systems don't talk to each other</li>
+              <li>Every funder audit is a fire drill</li>
+              <li>Cloud bills grow silently; beneficiary data sits unprotected</li>
+            </ul>
+          </div>
+          <div class="sg-card fit">
+            <h4>Where Dhwani fits</h4>
+            <ul>
+              <li><b>Back office on open-source ERP</b> (ERPNext/Frappe) — finance, HR, procurement without licence lock-in</li>
+              <li><b>Dashboard as a Service</b> — board-ready impact, SDG, and financial reporting</li>
+              <li><b>CloudSahayak + DPDP readiness</b> — 30–40% lower cloud costs, audit-ready data protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage reveal">
+        <span class="dot">4</span>
+        <span class="band">₹50–100+ crore · institutional scale</span>
+        <h3>From running programmes to proving outcomes</h3>
+        <p class="life">Government partnerships, international funders, federated structures. The bar moves again: not "did we deliver?" but "what changed, and can you show it?" Data becomes the organisation's backbone — and its credibility.</p>
+        <div class="stage-grid">
+          <div class="sg-card pain">
+            <h4>What starts to pinch</h4>
+            <ul>
+              <li>Evidence demands outgrow M&amp;E spreadsheets</li>
+              <li>Custom needs no off-the-shelf product covers</li>
+              <li>Your data could serve the whole sector — but has no vehicle</li>
+            </ul>
+          </div>
+          <div class="sg-card fit">
+            <h4>Where Dhwani fits</h4>
+            <ul>
+              <li><b>Custom platforms &amp; applied AI</b> — outcome measurement, voice assessments, chat-with-your-data on your own programme evidence</li>
+              <li><b>Ecosystem infrastructure</b> — public data portals and discovery platforms, like the City Finance Portal's 4,000 municipalities</li>
+              <li><b>Thought partnership</b> — 11 years of sector pattern-recognition at the leadership table</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Wherever you are on this road, start with a conversation.</h2>
+    <p class="reveal">Tell us your stage and your pain point. We'll tell you what you need — and just as importantly, what you don't need yet.</p>
+    <div class="cta reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-primary" style="background:#fff;color:var(--maroon)">Book a consultation <span class="arw">→</span></a>
+      <a href="solutions.html" class="btn btn-ghost">Browse the solutions</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap fgrid">
+    <div>
+      <a class="logo" href="index.html" style="color:#fff;margin-bottom:18px"><span class="mark"></span><span>Dhwani<small>Rural Information Systems</small></span></a>
+      <p class="tag">Development sector professionals first, IT professionals later. Simplifying technology for social-purpose organisations since 2015.</p>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul><li><a href="about.html">About</a></li><li><a href="work.html">Work</a></li><li><a href="careers.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+    <div>
+      <h5>What we do</h5>
+      <ul><li><a href="solutions.html">Solutions</a></li><li><a href="services.html">Services</a></li><li><a href="dpdp.html">DPDP readiness</a></li><li><a href="contact.html">Book a consultation</a></li><li><a href="assets/docs/dhwani-brochure.pdf" data-brochure>Download brochure</a></li></ul>
+    </div>
+    <div>
+      <h5>Ecosystem &amp; contact</h5>
+      <ul><li><a href="https://mgrant.in" target="_blank" rel="noopener">mgrant.in</a></li><li><a href="https://cloudsahayak.dhwaniris.com" target="_blank" rel="noopener">cloudsahayak</a></li><li><a href="https://dpdp.dhwaniris.com" target="_blank" rel="noopener">dpdp.dhwaniris.com</a></li><li><a href="https://www.linkedin.com/company/dhwaniris/" target="_blank" rel="noopener">LinkedIn</a></li></ul>
+      <p class="addr" style="margin-top:14px">partnerships@dhwaniris.com<br>Ground Floor, Building 94, Sector 44,<br>Gurugram, Haryana 122002, India</p>
+    </div>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© 2026 Dhwani Rural Information Systems Pvt. Ltd. All rights reserved.</span>
+    <span>ISO 27001 · Since 2015</span>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
