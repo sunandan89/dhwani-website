@@ -314,3 +314,11 @@ header.site.scrolled .logo:focus-visible,header.site.scrolled nav.main a:focus-v
 .tm-av{width:38px;height:38px;border-radius:50%;background:var(--tint-maroon);color:var(--maroon);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;font-family:var(--serif);flex:none}
 .tm-txt b{display:block;font-size:.92rem;line-height:1.25}
 .tm-txt i{font-style:normal;font-size:.78rem;color:var(--grey)}
+
+/* ===== impact stat band (left-aligned row + ISO + footnote) ===== */
+.stat-row{display:flex;flex-wrap:wrap;gap:26px 46px;align-items:flex-start;text-align:left}
+.stat-row .stat{text-align:left}
+.stat-row .iso{margin-left:auto;text-align:right}
+.stat-row .iso .num{font-size:1.9rem}
+.stat-foot{margin-top:22px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.58);max-width:900px}
+@media(max-width:640px){.stat-row .iso{margin-left:0;text-align:left}}
